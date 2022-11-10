@@ -1,26 +1,30 @@
 #include <iostream>
+#include <string>
 #include "stack.h"
+#include "matrix.h"
 
-static void printStack(const Stack &stack)
-{
-	for (Node *curr = stack.getHead(); curr; curr = curr -> next)
-		std::cout << curr -> x << ", " << curr -> y << std::endl;
-
-}
+/* 순수 선언 */
+bool findWord(Stack &, const Matrix &, const std::string &);
 
 int main(int argc, char *argv[])
 {
-	Stack s;
+	int row, col;
+	char ch;	
+	Stack stack;
+	bool result;	
+	std::string word;
 
-	s.push(1, 2);
-	s.push(3, 4);
-	s.push(5, 6);
+	std::cin >> row >> col;
+	Matrix matrix(row, col);
+	
+	std::cin >> word;
 
-	s.pop();
-	s.pop();
-	s.pop();
-
-	printStack(s);
+	result = findWord(stack, matrix, word);
+	if (result) {
+		stack.print();
+	} else {
+		std::cout << "not found";
+	}
 
 	return EXIT_SUCCESS;
 }
