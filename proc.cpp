@@ -22,7 +22,7 @@ bool findWord(int x, int y, Stack &stack, const Matrix &matrix, const std::strin
 	stack.push(x, y);
 	
 	/* 단어 발견 */
-	if (idx == word.length() - 1) 
+	if (idx == (int) word.length() - 1) 
 		return true;
 	
 	for (int i = -1; i <= 1; i++) {

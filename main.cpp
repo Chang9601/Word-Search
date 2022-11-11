@@ -10,7 +10,6 @@ int main(int argc, char *argv[])
 {
 	int row, col;
 	int idx;
-	char ch;	
 	Stack stack;
 	bool result;	
 	std::string word;

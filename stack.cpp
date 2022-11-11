@@ -57,7 +57,7 @@ void Stack::print() const
 {
 	/* 스택의 역순으로 출력 */
 	for (Node *curr = head -> prev; curr != head; curr = curr -> prev)
-		std::cout << curr -> x << ", " << curr -> y << std::endl;
+		std::cout << "(" << curr -> x << ", " << curr -> y << ")" << std::endl;
 }
 
 Node* Stack::getHead() const
